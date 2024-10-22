@@ -6,7 +6,7 @@
 ### `Where am I?`
 ```bash
 pwd
-# echo the location where you are
+# 'pwd' stands for 'print working directory'.
 ```
 ![[Pasted image 20241020163639.png]]
  
@@ -17,16 +17,54 @@ ls [options] [directory_or_path]
 ```
 
 ```bash
-ls
+ls 
 # list the file or directory concisely
+ls /home/chenqi5
 ```
 ![[Pasted image 20241020164037.png]]
 
 ```bash
 ls -l
 # Besides the name of the file/directory, the owner, the creation time and the permissions are shown.
+ls -l /home/chenqi5
 ```
 ![[Pasted image 20241020164113.png]]
+
+
+![](https://raw.githubusercontent.com/sudheerj/Linux-cheat-sheet/master/images/permissions.png)
+
+```bash
+chmod 755 chenqi5.txt
+# usually use 755, all permissions for owner of the file, while others could only read and executable. if you don't want others see your file, you could choose 711
+```
+
+```bash
+ls -l /home/chenqi5/test
+```
+
+`First column`: The first column displays the file type and permissions. Permissions are represented by 10 characters.
+
+- The first character indicates the file type:
+    - `-` represents a regular file.
+    - `d` represents a directory.
+    - `l` represents a link file, typically a symbolic link.
+    - Other characters such as `b`, `c`, `s`, `p` represent block device files, character device files, sockets, and FIFOs (pipes), respectively.
+- The following 9 characters represent file permissions, divided into three groups, each with 3 characters:
+    - The first group (from left to right) indicates the owner's permissions.
+    - The second group indicates the group's permissions.
+    - The third group indicates permissions for others.
+    - Each character can be `r` (readable), `w` (writable), or `x` (executable), or `-` to indicate the absence of that permission.
+
+`Third column`: The third column displays the username of the file's owner.
+
+`Fourth column`: The fourth column displays the group name to which the file belongs.
+
+`Fifth column`: The fifth column shows the size of the file in bytes. For directories, this number is usually 4096 bytes, which is the space occupied by the directory entries, not the total size of the files within the directory.
+
+`Sixth column`: The sixth column displays the date and time when the file was last modified.
+
+`Last column`: The last column shows the name of the file or directory.
+
 
 ```bash
 ls -al
@@ -43,17 +81,12 @@ ls --help
 ### `How to enter other directory?`
 ```
 cd [path_or_directory]
+# cd means 'change directory'
 ```
 
-```
+```bash
 cd ../
 # enter the upper folder
-
-cd 
-# enter /home/chenqi5/file/test_again/
-
-cd file
-# enter the file directory in current folder
 
 cd ~
 # enter your home directory
@@ -199,4 +232,11 @@ cp file/test_again/chenqi5.txt ./
 
 
 ## common scripts operating lines
-
+```
+Command script [input] [output]
+```
+`for example:`
+bash test.sh -i [file/string] -o [file/string] 
+python test.py -i [file/string] -o [file/string] 
+......
+ `In order to avoid bugs, you'd better write the absolute path of scripts, input file and output file.`
