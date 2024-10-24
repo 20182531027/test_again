@@ -84,11 +84,7 @@ bwa index pave_hpv193ref.fasta
 ```
 ### 2.2.2 mem alignmnet
 ```bash
-/home/chenqi5/miniconda3/bin/bwa/ mem -t 4 /home/chenqi5/file/test_again/pave_hpv193ref.fasta \ # the reference
-            BGIHPVTEST1_L01_1-9.hpv.qc.1.fq.gz \ # reads1 path
-            BGIHPVTEST1_L01_1-9.hpv.qc.2.fq.gz \ # reads2 path
-            > BGIHPVTEST1_L01_1-9.sam \ # output sam file
-            2> bwa.log # the record of process
+bwa mem -t 4 /home/chenqi5/file/test_again/pave_hpv193ref.fasta BGIHPVTEST1_L01_1-9.hpv.qc.1.fq.gz BGIHPVTEST1_L01_1-9.hpv.qc.2.fq.gz > BGIHPVTEST1_L01_1-9.sam
 ```
 
 **transform  *.sam to *.bam**
