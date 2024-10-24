@@ -2,8 +2,8 @@
 2. [bwa alignment](#BWA)
 	2.1 samtools view the result file
 3. genome assemble
-	 3.1 [Novoplasty](https://github.com/ndierckx/NOVOPlasty)
-	 3.2 [Spades](https://github.com/ablab/spades)
+    3.1 [Spades](https://github.com/ablab/spades)
+	3.2 [Novoplasty](https://github.com/ndierckx/NOVOPlasty)
 4. Blast to identify the type of HPV 
 # 1. [Fastp](https://github.com/OpenGene/fastp/blob/master/README.md)
 ## 1.1 Install
@@ -43,9 +43,9 @@ pwd
 ```
 
 ```bash
-fastp -i ../file/test_again/BGIHPVTEST1_L01_1-9.hpv.1.fq.gz \
+fastp -i BGIHPVTEST1_L01_1-9.hpv.1.fq.gz \
 -o BGIHPVTEST1_L01_1-9.hpv.qc.1.fq.gz \
--I ../file/test_again/BGIHPVTEST1_L01_1-9.hpv.2.fq.gz \
+-I BGIHPVTEST1_L01_1-9.hpv.2.fq.gz \
 -O BGIHPVTEST1_L01_1-9.hpv.qc.2.fq.gz \
 -h BGIHPVTEST1_L01_1-9.hpv.qc.html \
 -j BGIHPVTEST1_L01_1-9.hpv.qc.json
@@ -58,12 +58,12 @@ output fastq after fastp were sent for next alignment; while the .html or .json 
 
 use [**Seqkit**](https://bioinf.shenwei.me/seqkit/) to look the changes:
 ```bash 
-seqkit stats ../file/test_again/BGIHPVTEST1_L01_1-9.hpv.1.fq.gz
+seqkit stats BGIHPVTEST1_L01_1-9.hpv.1.fq.gz
 ```
 ![[Pasted image 20241019105944.png]]
 
 ```bash 
-seqkit stats ../file/test_again/BGIHPVTEST1_L01_1-9.hpv.1.fq.gz
+seqkit stats BGIHPVTEST1_L01_1-9.hpv.qc.1.fq.gz
 ```
 ![[Pasted image 20241019110134.png]]
 
