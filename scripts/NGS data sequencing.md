@@ -84,9 +84,9 @@ bwa index pave_hpv193ref.fasta
 ```
 ### 2.2.2 mem alignmnet
 ```bash
-bwa mem -t 4 ~/file/test_again/pave_hpv193ref.fasta \ # the reference 
-            ~/result/BGIHPVTEST1_L01_1-9/qc/BGIHPVTEST1_L01_1-9.hpv.qc.1.fq.gz \ # reads1 path
-            ~/result/BGIHPVTEST1_L01_1-9/qc/BGIHPVTEST1_L01_1-9.hpv.qc.2.fq.gz \ # reads2 path 
+bwa mem -t 4 /home/chenqi5/file/test_again/pave_hpv193ref.fasta \ # the reference 
+            BGIHPVTEST1_L01_1-9.hpv.qc.1.fq.gz \ # reads1 path
+            BGIHPVTEST1_L01_1-9.hpv.qc.2.fq.gz \ # reads2 path 
             > BGIHPVTEST1_L01_1-9.sam \ # output sam file
             2> ./bwa.log # the record of process
 ```
@@ -107,7 +107,7 @@ samtools view -bS -F 12 BGIHPVTEST1_L01_1-9.bam| samtools sort -n | samtools fas
 
 # 3. [Spades](https://ablab.github.io/spades/getting-started.html) for genome Assemble
 ```bash
-python /home/chenqi5/miniconda3/bin/spades.py -o ./ --pe1-1 ../align/BGIHPVTEST1_L01_1-9.hpv.map.1.fq --pe1-2 ../align/BGIHPVTEST1_L01_1-9.hpv.map.2.fq -t 4
+python /home/chenqi5/miniconda3/bin/spades.py -o ./ --pe1-1 BGIHPVTEST1_L01_1-9.hpv.map.1.fq --pe1-2 BGIHPVTEST1_L01_1-9.hpv.map.2.fq -t 4
 ```
 
 
