@@ -1,8 +1,8 @@
 1. RStudio Interface
 2. Common data Structues in R
-		2.1 Vector
-		2.2 Data frame
-		2.3 List
+	- 2.1 Vector
+	- 2.2 Data frame
+ 	- 2.3 List
 3. Package usage, such as [ggplot2](https://rstudio.github.io/cheatsheets/data-visualization.pdf), [dplyr]((https://rstudio.github.io/cheatsheets/data-transformation.pdf), [ggtree](https://www.jianshu.com/p/b37836d71a70) .etc
 # [RStudio Interface](https://rstudio.github.io/cheatsheets/rstudio-ide.pdf)
 RStudio is an integrated development environment (IDE) that provides a comprehensive set of tools to enhance your coding experience, making it more productive and enjoyable. RStudio is currently one of the most popular IDEs for R.
