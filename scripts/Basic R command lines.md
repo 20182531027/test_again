@@ -176,6 +176,11 @@ rec <- rec[-2]
 you could take a [test](https://app.datacamp.com/learn/assessments?technologies=1) to check your learning.
 # Package usage, such as ggplot2, dplyr, ggtree .etc
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/2sn6vnlXuibpcibBxbIXSrv2mfOG3E5QDnUrTq4dKA19R96d0QSicE2n0MeMibu5War80j7RrjRapVXdZ8oznH7vJQ/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+the mainly useful packages and their roles in data engineering
+
+![](https://mmbiz.qpic.cn/mmbiz_png/2sn6vnlXuibr3exiclzzKDblg76MApDzRicS8VFc6BooxakyYN8fmfxmjVgb7WeZpYKqdrJQhVfIzsWRNtnicOibFWA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
 - package install
 ```
 install.packages("ggplot2")
